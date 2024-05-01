@@ -1,0 +1,49 @@
+body{
+    margin: 0%;
+    background-color: black;
+}
+
+.F-fundo {
+    display: flex;
+    justify-content: center; 
+    position: fixed;
+   
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, 
+        #ff7f00 14.28%, /* Laranja */
+        #ffff00 28.57%, /* Amarelo */
+        #00ff00 42.85%, /* Verde */
+        #0000ff 57.14%, /* Azul */
+        #4b0082 71.42%, /* Índigo */
+        #8a2be2 85.71%  /* Violeta */
+    );
+   
+}
+
+.F-fundo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        url('https://i.gifer.com/YmEj.gif') center center repeat,
+        url('https://i.gifer.com/YmEj.gif') center center repeat,
+        url('https://i.gifer.com/YmEj.gif') center center repeat;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+
+.A-fundo {
+    background-color: white;
+    height: 900px;
+    width: 900px;
+    border-radius: 15px;
+    margin: 15px;
+    font-weight: 600;
+    font-style: italic;
+}
