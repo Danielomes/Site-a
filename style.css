@@ -39,11 +39,18 @@ body{
 }
 
 .A-fundo {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
     background-color: white;
     height: 900px;
     width: 900px;
     border-radius: 15px;
     margin: 15px;
     font-weight: 600;
+    
+}
+
+.A-fundo .texto1 {
+    text-align: center; /* Centralizar o texto horizontalmente */
     font-style: italic;
 }
