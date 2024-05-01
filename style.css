@@ -1,3 +1,6 @@
+*{
+    z-index: 1;
+}
 body{
     margin: 0%;
     background-color: black;
@@ -6,7 +9,7 @@ body{
 .F-fundo {
     display: flex;
     justify-content: center; 
-    position: fixed;
+    
    
     width: 100%;
     height: 100%;
@@ -19,12 +22,12 @@ body{
         #4b0082 71.42%, /* Índigo */
         #8a2be2 85.71%  /* Violeta */
     );
-   
+   z-index: -1;
 }
 
 .F-fundo::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,17 +36,90 @@ body{
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat;
+        
+        
     opacity: 0.5;
     mix-blend-mode: overlay;
-    z-index: 1;
+    z-index: 0;
 }
-
 .A-fundo {
+    display: flex;
+    flex-direction: column; /* Mudar a direção do layout para coluna */
+    align-items: center; /* Centralizar itens horizontalmente */
     background-color: white;
-    height: 900px;
-    width: 900px;
+    height: auto;
+    max-width: 1200px; /* Limitar a largura máxima */
     border-radius: 15px;
     margin: 15px;
     font-weight: 600;
+   
+}
+
+.A-fundo .texto1 {
+    text-align: center; /* Centralizar o texto horizontalmente */
+    font-style: italic;   
+}
+
+.imgs {
+    display: flex;
+    align-items: center;
+    
+}
+
+.img-container {
+    text-align: center;
+    margin: 0 50px;
+    margin-top: 5px;
+}
+
+.img-container img {
+    width: 300px; /* Tamanho fixo para a largura */
+    height: 300px; /* Tamanho fixo para a altura */
+    margin-bottom: 10px;
+}
+
+.img-container p {
+    font: bold;
     font-style: italic;
+    font-size: 15px;
+    
+}
+
+.F-banner{
+    
+}
+.F-banner .banner {
+    border: 5px solid;
+    border-radius: 20px;
+    height: 500px;
+    width: 1000px;
+    border-radius: 19px;
+    animation: border-color-animation 3s infinite; /* Definindo a animação */
+}
+
+@keyframes border-color-animation {
+    0% {
+        border-color: #ff7f00; /* Laranja */
+    }
+    14.28% {
+        border-color: #ff7f00; /* Laranja */
+    }
+    28.57% {
+        border-color: #ffff00; /* Amarelo */
+    }
+    42.85% {
+        border-color: #ffff00; /* Amarelo */
+    }
+    57.14% {
+        border-color: #00ff00; /* Verde */
+    }
+    71.42% {
+        border-color: #00ff00; /* Verde */
+    }
+    85.71% {
+        border-color: #0000ff; /* Azul */
+    }
+    100% {
+        border-color: #0000ff; /* Azul */
+    }
 }
