@@ -9,7 +9,7 @@ body{
 .F-fundo {
     display: flex;
     justify-content: center; 
-    
+    /* position: fixed; */
    
     width: 100%;
     height: 100%;
@@ -22,12 +22,12 @@ body{
         #4b0082 71.42%, /* Índigo */
         #8a2be2 85.71%  /* Violeta */
     );
-   z-index: -1;
+   
 }
 
 .F-fundo::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,36 +36,28 @@ body{
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat;
-        
-        
     opacity: 0.5;
     mix-blend-mode: overlay;
-    z-index: 0;
+    z-index: 1;
 }
+
 .A-fundo {
     display: flex;
-<<<<<<< HEAD
     flex-direction: column; /* Mudar a direção do layout para coluna */
     align-items: center; /* Centralizar itens horizontalmente */
-=======
-    justify-content: center; /* Centralizar horizontalmente */
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
     background-color: white;
+    height: 900px;
+    width: 1200px;
     height: auto;
     max-width: 1200px; /* Limitar a largura máxima */
     border-radius: 15px;
     margin: 15px;
     font-weight: 600;
-<<<<<<< HEAD
    
-=======
-    
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
 }
 
 .A-fundo .texto1 {
     text-align: center; /* Centralizar o texto horizontalmente */
-<<<<<<< HEAD
     font-style: italic;   
 }
 
@@ -89,8 +81,6 @@ body{
 
 .img-container p {
     font: bold;
-=======
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
     font-style: italic;
     font-size: 15px;
     
