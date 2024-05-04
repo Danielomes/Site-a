@@ -90,8 +90,21 @@ body{
     font-size: 15px;
     
 }
+.img1{
+    z-index: 1;
+}
+.img2{
+    position: absolute;
+    z-index: 2;
+}
 
-
+/* 
+***********************
+***********************
+        BANNER
+***********************
+***********************
+*/
 .F-banner .banner {
     border: 5px solid;
     border-radius: 20px;
@@ -135,6 +148,11 @@ body{
 *********************
 *********************
 */
+@keyframes bordacor {
+    to{
+        border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+    }
+}
 .menu {
     /* Alterado de flex para inline-block */
     display: flex;
@@ -142,11 +160,10 @@ body{
     font-size: 26px;
     height: auto;
     width: auto;
-    border-top: 4px solid ;
-    border-bottom: 4px solid ;
-   
-    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
- border-radius: 15px;
+    border-bottom: 4px solid;
+    border-top: 4px solid;
+    border-radius: 5px;
+    animation: border-color-animation 3s infinite;
     margin-top: 70px;
     margin-bottom: 100px;
 }
@@ -159,6 +176,7 @@ body{
 .menu a:hover{
     border: 1px solid ;
     border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+    
 }
 .cima,
 .baixo {
@@ -167,8 +185,47 @@ body{
     
 }
 .cima {
-    margin-bottom: 10px; /* Adiciona margem abaixo */
+    margin-top: 5px; /* Adiciona margem abaixo */
+    top: 0;
+ 
+    
 }
 .baixo {
     margin-top: 50px; /* Adiciona margem acima */
+}
+.cima {
+    position: relative;
+}
+
+.link1  {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 31px;
+    width: 120px;
+    transition: opacity 0.3s ease; /* Adicionar uma transição suave */
+}
+
+.link1 {
+    z-index: 2; /* Texto "sobre-nós" fica acima */
+    
+}
+
+.link2  {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    z-index: 1; /* Texto "Verdade" fica abaixo */
+    opacity: 0%;
+    height: 20;
+}
+
+/* Tornar os links visíveis quando o mouse passa por cima */
+.cima:hover .link2 {
+    opacity: 1;
+    transition: 5s ease-in;
+}
+
+.menu .cima:first-child a:hover{
+    background-color: #FFFFEF;
 }
