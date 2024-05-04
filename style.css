@@ -85,16 +85,12 @@ body{
 
 .img-container p {
     font: bold;
-=======
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
     font-style: italic;
     font-size: 15px;
     
 }
 
-.F-banner{
-    
-}
+
 .F-banner .banner {
     border: 5px solid;
     border-radius: 20px;
