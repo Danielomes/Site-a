@@ -223,7 +223,8 @@ body{
 /* Tornar os links visíveis quando o mouse passa por cima */
 .cima:hover .link2 {
     opacity: 1;
-    transition: 5s ease-in;
+    transition: 3s ease-in;
+  
 }
 
 .menu .cima:first-child a:hover{
