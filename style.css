@@ -43,6 +43,7 @@ body{
     z-index: 0;
 }
 .A-fundo {
+    
     display: flex;
 
     flex-direction: column; /* Mudar a direção do layout para coluna */
@@ -125,4 +126,49 @@ body{
     100% {
         border-color: #0000ff; /* Azul */
     }
+}
+
+/* 
+*********************
+*********************
+        MENU
+*********************
+*********************
+*/
+.menu {
+    /* Alterado de flex para inline-block */
+    display: flex;
+    text-align: center;
+    font-size: 26px;
+    height: auto;
+    width: auto;
+    border-top: 4px solid ;
+    border-bottom: 4px solid ;
+   
+    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+ border-radius: 15px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.menu a{
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover{
+    border: 1px solid ;
+    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+}
+.cima,
+.baixo {
+    width: 175px; /* Define a largura das divs para melhor visualização */
+    height: 50px; /* Define a altura das divs para melhor visualização */
+    
+}
+.cima {
+    margin-bottom: 10px; /* Adiciona margem abaixo */
+}
+.baixo {
+    margin-top: 50px; /* Adiciona margem acima */
 }
