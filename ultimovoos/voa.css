@@ -1,26 +1,33 @@
-*{
+* {
     z-index: 1;
-}
-body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
+
 .F-fundo {
     display: flex;
     justify-content: center; 
     align-items: center;
-    height: 100vh;
     background: linear-gradient(to bottom, 
+        #8a2be2 0%,     /* Violeta */
         #ff7f00 14.28%, /* Laranja */
         #ffff00 28.57%, /* Amarelo */
         #00ff00 42.85%, /* Verde */
         #0000ff 57.14%, /* Azul */
         #4b0082 71.42%, /* Índigo */
-        #8a2be2 85.71%  /* Violeta */
+        #8a2be2 100%    /* Violeta */
     );
+    height: auto;
+
 }
+
 .F-fundo::before {
     content: "";
     position: fixed;
@@ -32,27 +39,57 @@ body {
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat;
-        
-        
-    opacity: 0.2;
+    opacity: 0.05;
     mix-blend-mode: overlay;
     z-index: 0;
 }
+
 .A-fundo {
-    height: 500px;
-    text-align: center;
-    
+    margin-top: 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    text-align: center;
-  
 }
+
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     line-height: 1.4;
     color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+li strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+li ul {
+    padding-left: 20px;
+}
+
+li ul li {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
 }
