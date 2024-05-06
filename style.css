@@ -124,6 +124,18 @@ body{
     animation: border-color-animation 3s infinite; /* Definindo a animação */
 }
 
+.MH370{
+    height: 500px;
+    width: 1000px;
+    border-radius: 19px;
+
+    position: absolute;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
 @keyframes border-color-animation {
     0% {
         border-color: #ff7f00; /* Laranja */
