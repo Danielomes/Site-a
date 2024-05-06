@@ -98,6 +98,16 @@ body{
     z-index: 2;
 }
 
+.SI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    opacity: 0;
+}
+
 /* 
 ***********************
 ***********************
