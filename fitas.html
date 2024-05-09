@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeos Interessantes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    .video-link {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+    .video-link:nth-child(1) {
+      top: 20%;
+      left: 20%;
+    }
+    .video-link:nth-child(2) {
+      top: 40%;
+      left: 40%;
+    }
+    .video-link:nth-child(3) {
+      top: 60%;
+      left: 60%;
+    }
+    /* Adicione mais estilos para cada link conforme necessário */
+    .video-link:hover {
+      color: #FFD700; /* Mudar cor quando o mouse passa por cima */
+    }
+  </style>
+</head>
+<body>
+  <h1>Vídeos Interessantes</h1>
+  <a class="video-link" href="link_para_video1">2024-05-07-22-01-05.mp4</a>
+  <!-- Adicione quantos vídeos desejar seguindo o mesmo padrão -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona todos os links na página
+    const links = document.querySelectorAll("a");
+
+    // Para cada link, define uma posição aleatória
+    links.forEach(function(link) {
+        // Calcula posições aleatórias dentro do tamanho da janela
+        const randomX = Math.floor(Math.random() * window.innerWidth);
+        const randomY = Math.floor(Math.random() * window.innerHeight);
+
+        // Aplica as posições aleatórias aos estilos do link
+        link.style.position = "absolute";
+        link.style.top = randomY + "px";
+        link.style.left = randomX + "px";
+    });
+});
+  </script>
+</body>
+</html>
