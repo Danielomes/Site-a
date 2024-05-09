@@ -13,16 +13,35 @@
         }
 
         .image {
-            margin-right: 20px;
+            margin-right: 2px;
         }
 
         .image img {
             width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
             height: auto;
+            margin-top: 35%;
         }
 
+        h1{
+            text-align: center; /* Centralizar o texto horizontalmente */
+        }
         .text {
-            flex-grow: 1;
+           
+
+            font-style: italic;   
+            font-size: 20px;
+        }
+        #loginForm {
+            display: none; /* Inicia oculto */
+        }
+        #container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #loginForm {
+            display: none;
+            margin-left: 20px; /* Adiciona margem à esquerda para separar do texto */
         }
     </style>
 </head>
@@ -31,11 +50,9 @@
         <div class="A-fundo"> 
 
            <div class="container">
-                <div class="image">
-                    <img src="imgs/themepark.jpg" alt="">
-                </div>
+                
                 <div class="text">
-                    <h1>sobre nós</h1>
+                    <h1>Carta do gerente</h1>
                     <p>Caros Clientes,</p>
                     <p>Gostaria de compartilhar uma história que nos remete às maravilhas e desafios das viagens, um conto que nos faz refletir sobre as jornadas que empreendemos em busca de novas experiências e aventuras.</p>
                     <p>Imagine-se como três amigos agraciados com uma viagem surpreendente para destinos paradisíacos. Nossa companhia, a Artesmp Airlines, tem o prazer de oferecer experiências únicas, proporcionando momentos de deleite e descontração a todos os nossos passageiros.</p>
@@ -44,14 +61,21 @@
                     <p>Assim como cada um de nossos passageiros embarca em uma jornada única, repleta de oportunidades de descoberta e autoconhecimento, esperamos que cada viagem com a Artesmp Airlines seja uma aventura inesquecível, capaz de transformar vidas e criar memórias duradouras.</p>
                     <p>Portanto, convido a todos a embarcarem conosco em nossos próximos voos, onde as surpresas e os encantos das viagens aguardam para serem descobertos.</p>
                     <p>Com gratidão pelo privilégio de fazer parte de suas histórias de viagem,</p>
-                    <p>Daniel Rosa</p>
+
                     <p>Gerente de Relações Públicas</p>
                     <p>Artesmp Airlines</p>
                     
-                    
+                    <img src="imgs/flight.png" alt="" onclick="showLoginForm()" id="img"> <!-- Adiciona um evento onclick para mostrar o formulário -->
+                    <form id="loginForm" onsubmit="return checkPassword()">
+                        <label for="password">Digite a senha:</label>
+                        <input type="password" id="password" name="password">
+                        <button type="submit">Entrar</button>
+                    </form>
+                
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
