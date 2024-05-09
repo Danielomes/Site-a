@@ -107,17 +107,13 @@ body{
     position: absolute;
     z-index: 2;
 }
-
-.SI{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.SO{
+ 
+    z-index: 1;
+}
+.SI{ 
     position: absolute;
-
-    margin-top: -20.7%;
-
-    z-index: -1;
+    z-index: 2;
 }
 
 /* 
@@ -130,32 +126,25 @@ body{
 .banner {
     border: 5px solid;
     border-radius: 20px;
-
     height: 500px;
     width: 1000px;
     animation: border-color-animation 3s infinite; /* Definindo a animação */
+    position: absolute;
+    z-index: 2; /* Definindo z-index maior que a .MH370 */
 }
 
-.MH370{
-    
-
+.MH370 {
+    border: 5px solid;
     height: 500px;
     width: 1000px;
-    border-radius: 19px;
-    margin-top: -33.5%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-
+    border-radius: 20px;
+    
+ 
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray;
-
-    z-index: -1;
-
-    /* opacity: 0; */
+    z-index: 1; /* Definindo z-index menor que a .banner */
+    animation: border-color-animation 3s infinite; /* Definindo a animação */
 }
 
 @keyframes border-color-animation {
