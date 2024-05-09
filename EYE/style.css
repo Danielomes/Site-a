@@ -1,0 +1,35 @@
+body {
+    /* Define a imagem de fundo e estica para cobrir toda a tela */
+    background-image: url('https://theshockingtruestoryofmonsteragogo.files.wordpress.com/2019/10/sentimentaloblongdiplodocus-size_restricted.gif?w=602');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+/* Estiliza os parágrafos */
+p {
+    position: absolute;
+    /* Define uma cor de texto branca para contrastar com o fundo */
+    color: rgb(4, 4, 4);
+}
+
+/* Define posições aleatórias para os parágrafos */
+p:nth-child(1) {
+    top: 100px;
+    left: 200px;
+}
+
+p:nth-child(2) {
+    top: 300px;
+    left: 500px;
+}
+
+p:nth-child(3) {
+    top: 600px;
+    left: 800px;
+}
+p {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer / Edge */
+    user-select: none; /* Padrão */
+}

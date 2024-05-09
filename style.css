@@ -36,15 +36,28 @@ body{
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat;
+
     opacity: 0.5;
+  
+        
+    opacity: 0.2;
+
     mix-blend-mode: overlay;
     z-index: 1;
 }
 
 .A-fundo {
+    
     display: flex;
+
     flex-direction: column; /* Mudar a direção do layout para coluna */
     align-items: center; /* Centralizar itens horizontalmente */
+
+
+    flex-direction: column; /* Mudar a direção do layout para coluna */
+    align-items: center; /* Centralizar itens horizontalmente */
+
+    justify-content: center; /* Centralizar horizontalmente */
     background-color: white;
     height: 900px;
     width: 1200px;
@@ -53,12 +66,14 @@ body{
     border-radius: 15px;
     margin: 15px;
     font-weight: 600;
-   
 }
 
-.A-fundo .texto1 {
+.texto1 {
     text-align: center; /* Centralizar o texto horizontalmente */
+
+
     font-style: italic;   
+    font-size: 75px;
 }
 
 .imgs {
@@ -85,17 +100,62 @@ body{
     font-size: 15px;
     
 }
-
-.F-banner{
-    
+.img1{
+    z-index: 1;
 }
-.F-banner .banner {
+.img2{
+    position: absolute;
+    z-index: 2;
+}
+
+.SI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    margin-top: -20.7%;
+
+    z-index: -1;
+}
+
+/* 
+***********************
+***********************
+        BANNER
+***********************
+***********************
+*/
+.banner {
     border: 5px solid;
     border-radius: 20px;
+
+    height: 500px;
+    width: 1000px;
+    animation: border-color-animation 3s infinite; /* Definindo a animação */
+}
+
+.MH370{
+    
+
     height: 500px;
     width: 1000px;
     border-radius: 19px;
-    animation: border-color-animation 3s infinite; /* Definindo a animação */
+    margin-top: -33.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+
+    z-index: -1;
+
+    /* opacity: 0; */
 }
 
 @keyframes border-color-animation {
@@ -123,4 +183,94 @@ body{
     100% {
         border-color: #0000ff; /* Azul */
     }
+}
+
+/* 
+*********************
+*********************
+        MENU
+*********************
+*********************
+*/
+@keyframes bordacor {
+    to{
+        border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+    }
+}
+.menu {
+    /* Alterado de flex para inline-block */
+    display: flex;
+    text-align: center;
+    font-size: 26px;
+    height: auto;
+    width: auto;
+    border-bottom: 4px solid;
+    border-top: 4px solid;
+    border-radius: 5px;
+    animation: border-color-animation 3s infinite;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.menu a{
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover{
+    border: 1px solid ;
+    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+    
+}
+.cima,
+.baixo {
+    width: 175px; /* Define a largura das divs para melhor visualização */
+    height: 50px; /* Define a altura das divs para melhor visualização */
+    
+}
+.cima {
+    margin-top: 5px; /* Adiciona margem abaixo */
+    top: 0;
+ 
+    
+}
+.baixo {
+    margin-top: 50px; /* Adiciona margem acima */
+}
+.cima {
+    position: relative;
+}
+
+.link1  {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 31px;
+    width: 120px;
+    transition: opacity 0.3s ease; /* Adicionar uma transição suave */
+}
+
+.link1 {
+    z-index: 2; /* Texto "sobre-nós" fica acima */
+    
+}
+
+.link2  {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    z-index: 1; /* Texto "Verdade" fica abaixo */
+    opacity: 0%;
+    height: 20;
+}
+
+/* Tornar os links visíveis quando o mouse passa por cima */
+.cima:hover .link2 {
+    opacity: 1;
+    transition: 3s ease-in;
+  
+}
+
+.menu .cima:first-child a:hover{
+    background-color: #ffffeb;
 }
