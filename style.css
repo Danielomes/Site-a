@@ -27,7 +27,7 @@ body{
 
 .F-fundo::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,14 +36,11 @@ body{
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat,
         url('https://i.gifer.com/YmEj.gif') center center repeat;
-
-    opacity: 0.5;
-  
+        
         
     opacity: 0.2;
-
     mix-blend-mode: overlay;
-    z-index: 1;
+    z-index: 0;
 }
 
 .A-fundo {
@@ -92,6 +89,9 @@ body{
     width: 300px; /* Tamanho fixo para a largura */
     height: 300px; /* Tamanho fixo para a altura */
     margin-bottom: 10px;
+    border: 3px solid;
+    animation: border-color-animation 3s infinite; /* Definindo a animação */
+    
 }
 
 .img-container p {

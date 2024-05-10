@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon">
+    <title>ArtSMP</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .container {
@@ -77,5 +78,28 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+             // Armazenar o favicon padrão e o título padrão
+             var defaultFavicon = document.querySelector("link[rel='shortcut icon']").href;
+             var defaultTitle = document.title;
+ 
+             // Função para mudar o favicon e o título
+             function changeFaviconAndTitle(newFavicon, newTitle) {
+                 document.querySelector("link[rel='shortcut icon']").href = newFavicon;
+                 document.title = newTitle;
+             }
+ 
+             // Adicionando evento de perda de foco  
+             window.addEventListener('blur', function() {
+                 changeFaviconAndTitle('https://i1.sndcdn.com/artworks-A8myAbyaeChBvvDM-EUUirA-t500x500.jpg', 'It´s me');
+             });
+ 
+             // Adicionando evento de ganho de foco
+             window.addEventListener('focus', function() {
+                 changeFaviconAndTitle(defaultFavicon, defaultTitle);
+             });
+         });
+     </script>
 </body>
 </html>

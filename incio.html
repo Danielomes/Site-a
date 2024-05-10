@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" class="favicon    " href="imgs/logo.png" type="image/x-icon">
+    <title>ArtSMP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,25 +27,31 @@
                 <!-- BLIDO de TEKSTO -->
 
                 <div class="img-container">
-                    <img src="imgs/themepark.jpg" alt="" class="img2">
+                    <img src="imgs/acapulco.jpg" alt="" class="img2">
                     <a href="EYE/olho.html"><img src="imgs/preto.png" alt="oi" class="img1"></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, aliquam natus! Alias culpa et eos modi ipsa, aspernatur facere, deleniti harum soluta repudiandae asperiores facilis? Optio eveniet reprehenderit vitae enim!</p>
+                    <p>Desembarque no Aeroporto Internacional de Acapulco e faça o traslado para seu hotel à beira-mar.
+                        Relaxe na praia e desfrute do sol e da areia, ou dê um mergulho refrescante nas águas cristalinas do Pacífico.
+                        À noite, jante em um restaurante à beira-mar para saborear os frutos do mar frescos da região.</p>
                     
                 </div>
                 
 
                 
                 <div class="img-container">
-                    <img src="imgs/themepark.jpg" alt="" class="img2">
+                    <img src="imgs/shibuya.jpg" alt="" class="img2">
                     <img src="imgs/QrCode.png" alt="" class="img1">
                     
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem voluptatum eaque expedita, amet odit dolores modi ab reiciendis ullam veritatis culpa blanditiis sit in soluta repudiandae laboriosam voluptate quidem? Autem.</p>
+                    <p>Desembarque no Aeroporto de Tóquio e faça o traslado para seu hotel em Shibuya. <br>
+                        Explore o cruzamento de Shibuya e tire fotos memoráveis em frente à estátua de Hachiko. <br>
+                        Jante em um dos muitos restaurantes locais para experimentar a deliciosa culinária japonesa. <br> <br> </p>
                 </div>
 
                 
                 <div class="img-container">
-                    <img src="imgs/themepark.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab aliquid hic iste temporibus beatae cupiditate, doloribus non error et eaque consequuntur nobis in, omnis tenetur architecto! Animi, maiores non?
+                    <img src="imgs/paris.jpg" alt="">
+                    <p>Desembarque no Aeroporto de Paris-Charles de Gaulle e faça o traslado para o seu hotel no centro da cidade.
+                        Passeie ao longo do Rio Sena e absorva a atmosfera romântica da cidade das luzes.
+                        Jante em um dos charmosos cafés parisienses para experimentar a culinária francesa clássica.
                     </p>
                 </div>
 
@@ -62,7 +69,7 @@
             </div>
 
             <!-- FINO DE STANDARTO -->
-            <h1 class="texto1">BEM VINDO AO ASMP ARLINES</h1>
+            <h1 class="texto1">MENU</h1>
 
             <div class="menu">
                 <div class="cima">
@@ -71,7 +78,7 @@
                 </div>
                 <div class="baixo"><a href="contatinus/conta.html">contate-nos</a></div>
                 <div class="cima"><a href="ultimovoos/voo.html">ultimos -voos</a></div>
-                <div class="baixo"><a href="">parceiros</a></div>
+                <div class="baixo"><a href="parceiros/parceiro.html">parceiros</a></div>
                 <div class="cima"><a href="gere.html">gerentes</a></div>
             
             </div>
@@ -95,5 +102,28 @@
     
 
     <script src="script.js"></script>
+    <script>
+       window.addEventListener('load', function() {
+            // Armazenar o favicon padrão e o título padrão
+            var defaultFavicon = document.querySelector("link[rel='shortcut icon']").href;
+            var defaultTitle = document.title;
+
+            // Função para mudar o favicon e o título
+            function changeFaviconAndTitle(newFavicon, newTitle) {
+                document.querySelector("link[rel='shortcut icon']").href = newFavicon;
+                document.title = newTitle;
+            }
+
+            // Adicionando evento de perda de foco  
+            window.addEventListener('blur', function() {
+                changeFaviconAndTitle('imgs/blood.png', 'Nada é Absolu...');
+            });
+
+            // Adicionando evento de ganho de foco
+            window.addEventListener('focus', function() {
+                changeFaviconAndTitle(defaultFavicon, defaultTitle);
+            });
+        });
+    </script>
 </body>
 </html>
