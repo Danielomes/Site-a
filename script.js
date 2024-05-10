@@ -24,12 +24,12 @@ function showLoginForm() {
 
 function checkPassword() {
     var password = document.getElementById("password").value;
+    
     // Aqui você verifica se a senha está correta
     if (password === "PMStra") {
         window.location.href = "fitas.html"; // Redireciona para outra página se a senha estiver correta
         return false; // Impede o envio do formulário
     } else {
-     
         return false; // Impede o envio do formulário
     }
 }
