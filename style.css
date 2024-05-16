@@ -44,28 +44,22 @@ body{
 }
 .A-fundo {
     display: flex;
-<<<<<<< HEAD
+
     flex-direction: column; /* Mudar a direção do layout para coluna */
     align-items: center; /* Centralizar itens horizontalmente */
-=======
+
     justify-content: center; /* Centralizar horizontalmente */
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
+
     background-color: white;
     height: auto;
     max-width: 1200px; /* Limitar a largura máxima */
     border-radius: 15px;
     margin: 15px;
     font-weight: 600;
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
 }
 
 .A-fundo .texto1 {
     text-align: center; /* Centralizar o texto horizontalmente */
-<<<<<<< HEAD
     font-style: italic;   
 }
 
@@ -89,8 +83,6 @@ body{
 
 .img-container p {
     font: bold;
-=======
->>>>>>> 021515a0ca792fdffc2370f4dca0b1bcfd188418
     font-style: italic;
     font-size: 15px;
     
